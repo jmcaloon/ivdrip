@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  script(type="text/javascript"). 
+    var allPlaylists = !{allPlaylists} // now data can be accessed with jquery
+  title Search Results
+  .container-fluid
+    h4 All Playlists
+    hr
+    .row
+      for playlist in allPlaylists
+        .col-sm-4
+          h5 #{playlist.title}
+          iframe(src= playlist.url, width='300', height='350', frameborder='0', allowtransparency='true')
