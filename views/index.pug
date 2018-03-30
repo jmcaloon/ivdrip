@@ -3,32 +3,8 @@ extends layout
 block content
   script(type="text/javascript"). 
     var allPlaylists = !{allPlaylists} // now data can be accessed with jquery
-  style(media='screen').
-    .jumbotron{
-    text-align:center;
-    }
-    .col-sm-4{
-    padding-bottom: 20px;
-    }
-    #logo{
-    max-width: 20%;
-    height: auto;
-    border-radius: 50%;
-    }
-    @media (min-width: 576px) {
-    .jumbotron {
-    padding-top: 20px;
-    padding-bottom: 20px; //for resizing jumbotron
-    }
-    }
   title The IV Drip
   body
-    // Jumbotron
-    .jumbotron
-      img#logo(src='images/logo.png', alt='Logo')
-      h1 The IV Drip
-      p
-        | A weekly dose of the latest and/or greatest in alt rock, featuring highlights from the best of the week's albums!
     .container-fluid
       h4 Recently Aired
       hr
@@ -40,7 +16,7 @@ block content
         p
           | more
 
-      h4 Recommended
+      h4 DJ's Picks
       hr
       .row
         .col-sm-4

@@ -1,14 +1,31 @@
 extends layout
 
+block additionalHead
+  script(type='text/javascript', src='/scripts/search.js')
+  style(type='text/css').
+    .search {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    }
+    label {
+    font-size: 30px;
+    }
+    input {
+    height: 30px;
+    }
+    
+
 block content
-  script(type="text/javascript"). 
-    var allPlaylists = !{allPlaylists} // now data can be accessed with jquery
-  title Search Results
+  title Search Playlists
   .container-fluid
-    h4 All Playlists
+    .search
+      label Search Playlists by Title:
+      input.search-box(type='text')
     hr
     .row
       for playlist in allPlaylists
         .col-sm-4
-          h5 #{playlist.title}
-          iframe(src= playlist.url, width='300', height='350', frameborder='0', allowtransparency='true')
+            div(class='playlist')
+              h5 #{playlist.title}
+              iframe(src= playlist.url, width='300', height='350', frameborder='0', allowtransparency='true')

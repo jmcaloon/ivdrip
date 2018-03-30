@@ -5,6 +5,31 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
     // Bootstrap CSS
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
+    // jQuery
+    script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=', crossorigin='anonymous')
+    //Ajax
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q', crossorigin='anonymous')
+    //Bootstrap JS
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl', crossorigin='anonymous')
+    style(media='screen').
+      .jumbotron{
+      text-align:center;
+      }
+      .col-sm-4{
+      padding-bottom: 20px;
+      }
+      #logo{
+      max-width: 20%;
+      height: auto;
+      border-radius: 50%;
+      }
+      @media (min-width: 576px) {
+      .jumbotron {
+      padding-top: 10px;
+      padding-bottom: 20px; //for resizing jumbotron
+      }
+      }
+    block additionalHead
   body
     // Navbar
     nav.navbar.navbar-expand-sm.bg-dark.navbar-dark
@@ -17,6 +42,13 @@ html(lang='en')
             a.nav-link(href='/howtolisten') How to Listen
           li.nav-item
             a.nav-link(href='/blog') Blog
-            li.nav-item
-              a.nav-link(href='/search') Search Playlists
+          li.nav-item
+            a.nav-link(href='/search') Search Playlists
+    // Jumbotron
+    .jumbotron
+      a.nav-link(href='/')
+        img#logo(src='images/logo.png', alt='Logo')
+      h1 The IV Drip
+      p
+        | A weekly dose of the latest and/or greatest in alt rock, featuring highlights from the best of the week's albums!
 block content
