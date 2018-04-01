@@ -5,8 +5,16 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
     // Bootstrap CSS
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
+    link(href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet")
+    link(rel='stylesheet', href='stylesheets/style.css')
+    // jQuery Countdown CSS 
+    link(rel='stylesheet', href='stylesheets/countdown/jquery.countdown.css')
+    
     // jQuery
-    script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=', crossorigin='anonymous')
+    script(src='https://code.jquery.com/jquery-3.3.1.min.js')
+    //jQuery countdown
+    script(type='text/javascript', src='scripts/countdown/jquery.plugin.js')
+    script(type='text/javascript', src='scripts/countdown/jquery.countdown.js')
     //Ajax
     script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q', crossorigin='anonymous')
     //Bootstrap JS
@@ -39,6 +47,8 @@ html(lang='en')
       #collapsibleNavbar.collapse.navbar-collapse
         ul.navbar-nav
           li.nav-item
+            a.nav-link(href='/') Home
+          li.nav-item
             a.nav-link(href='/howtolisten') How to Listen
           li.nav-item
             a.nav-link(href='/blog') Blog
@@ -51,4 +61,7 @@ html(lang='en')
       h1 The IV Drip
       p
         | A weekly dose of the latest and/or greatest in alt rock, featuring highlights from the best of the week's albums!
+      p Thursdays 12-2pm | 89.3 FM | 
+        a(href='/howtolisten') Live Stream
+  
 block content

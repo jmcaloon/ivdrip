@@ -1,4 +1,30 @@
 extends layout
 
+block additionalHead
+  script(type='text/javascript', src='/scripts/nextShow.js')
+  style(type="text/css").
+    #player-box{
+    text-align: center;
+    vertical-align: middle;
+    border: 5px solid gray;
+    padding: 10px;
+    margin-left: 40px;
+    margin-right:40px;
+    }
+    
+
 block content
-  h1 Here's how you can listen to the IV Drip
+  h3 Listen here Thursdays from 12-2pm:
+
+
+  body
+    #player-box
+      h4#player-name WTBU Live Stream
+      audio(controls='')
+        source#player-src(src='http://wtbu.bu.edu:1800/', type='audio/mpeg')
+    br
+    h4 Next show: 
+      span#next-show 
+    br
+    h4 We're live in...
+    #countdown

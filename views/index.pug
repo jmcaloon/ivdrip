@@ -1,8 +1,6 @@
 extends layout
 
 block content
-  script(type="text/javascript"). 
-    var allPlaylists = !{allPlaylists} // now data can be accessed with jquery
   title The IV Drip
   body
     .container-fluid
@@ -13,27 +11,24 @@ block content
           .col-sm-4
             h5 #{playlist.title}
             iframe(src= playlist.url, width='300', height='350', frameborder='0', allowtransparency='true')
-        p
-          | more
 
       h4 DJ's Picks
       hr
       .row
         .col-sm-4
-          h5 Playlist 1
-          iframe(src='https://open.spotify.com/embed/user/04g30cjey9d0jerbgv7hzvnv4/playlist/1LNXBnXUArXW88bkaVm1IX', width='300', height='350', frameborder='0', allowtransparency='true')
+          h5 Killer Ladies [IVD 2/22]
+          iframe(src="https://open.spotify.com/embed/user/04g30cjey9d0jerbgv7hzvnv4/playlist/5bRe5rypKumn4aaqCJiqnP", width="300", height="350", frameborder="0", allowtransparency="true")
         .col-sm-4
-          h5 Playlist 2
-          iframe(src='https://open.spotify.com/embed/user/04g30cjey9d0jerbgv7hzvnv4/playlist/5xyOoT3xRIK0EPVqZ4Beuq', width='300', height='350', frameborder='0', allowtransparency='true')
+          h5 Good Vibes Only [IVD 3/1]
+          iframe(src="https://open.spotify.com/embed/user/04g30cjey9d0jerbgv7hzvnv4/playlist/5xyOoT3xRIK0EPVqZ4Beuq", width='300', height='350', frameborder='0', allowtransparency='true')
         .col-sm-4
-          h5 Playlist 3
-          iframe(src='https://open.spotify.com/embed/user/04g30cjey9d0jerbgv7hzvnv4/playlist/5bRe5rypKumn4aaqCJiqnP', width='300', height='350', frameborder='0', allowtransparency='true')
-        p
-          | more
-      h4 Browse All
+          h5 punk's not dead [IVD 2/15]
+          iframe(src="https://open.spotify.com/embed/user/04g30cjey9d0jerbgv7hzvnv4/playlist/0P69gKsRXRoWAqWH5rdXsb" width="300", height="350", frameborder="0", allowtransparency="true")
+
+      h4 Best of the Week's
       hr
       .row
-        for playlist in allPlaylists
+        for playlist in bestOfWeek
           .col-sm-4
             h5 #{playlist.title}
             iframe(src= playlist.url, width='300', height='350', frameborder='0', allowtransparency='true')

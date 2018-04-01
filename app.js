@@ -7,7 +7,7 @@ var app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'scripts')));
+
 
 app.engine('pug', require('pug').__express)
 app.set('views', __dirname + '/views');
@@ -32,6 +32,7 @@ function getPlaylists(callback){
   };
   let allPlaylists = [];
   let recentlyAired = [];
+  let bestOfWeek = [];
 
   request.post(authOptions, function(error, response, body) {
     if (!error && response.statusCode === 200) {
@@ -57,9 +58,12 @@ function getPlaylists(callback){
           if (counter < 3){
             recentlyAired.push({"title": title, "url": url});
           }
+          if (title.includes("Best of the Week")){
+            bestOfWeek.push({"title": title, "url": url});
+          }
           counter++;
         }
-        return callback(null, [allPlaylists, recentlyAired]);
+        return callback(null, [allPlaylists, recentlyAired, bestOfWeek]);
       });
     }
   });
@@ -68,7 +72,7 @@ function getPlaylists(callback){
 app.get('/', function(req, res){
   getPlaylists(function(err, data){
     if(err) return res.send(err);
-    res.render("index", { allPlaylists: data[0], recentlyAired: data[1]});
+    res.render("index", { allPlaylists: data[0], recentlyAired: data[1], bestOfWeek: data[2]});
   });
 });
 
@@ -81,11 +85,8 @@ app.get('/search', function (req, res){
 
 app.get('/howtolisten', function (req, res){
   res.render("listen");
-
 });
-
 
 app.get('/blog', function(req, res){
   res.render("blog");
-
 });

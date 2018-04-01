@@ -1,5 +1,101 @@
 extends layout
 
+block additionalHead
+  script(type='text/javascript', src='/scripts/blog.js')
+  style(type='text/css').
+    hr{
+      height: 3px;
+      background-color: black;
+    }
+    .post-text{
+      height: 6em;
+      overflow: hidden;
+    }
+    
+    label {
+    font-size: 20px;
+    }  
+    
 block content
-  title The IV Drip: Blog
-  h1 Ivy's darkest thoughts
+
+  .blog-header
+    .container
+      h1.blog-title Album Review Blog
+      //p.lead.blog-description Album reviews and more
+  .container
+    .row
+      .col-sm-8.blog-main
+        hr
+        .blog-post
+          h2.blog-post-title Glen Hansard - Between Two Shores 
+          p.blog-post-meta
+            | January 18, 2018 by Ivy
+          .post-content
+            p
+              |Genre: Indie, folk
+            p
+              |Recommended Songs:
+            ul.songs
+              li Roll on Slow
+              li Why Woman
+            p.post-text
+              | The name Glen Hansard felt vaguely familiar to me, but I couldn't put my finger on why until I checked his Spotify discography and realized that he both starred in and wrote music for the movie Once, which I was obsessed with in my freshman year of high school. I had the CD from the library and wore it out, but particularly the song "Falling Slowly". Anyway, this album is pure, good folk/indie rock, the likes of which flourished in the 2010 era but have been on the decline for a | bit now. Glen Hansard is a wonderful singer and songwriter, and although I myself don't consider myself big into this style of music anymore, it's still a treat to hear the genre in the hands of someone who knows what they're doing. 
+            button.more(type='button') More
+            
+        hr
+        .blog-post
+          h2.blog-post-title The XCERTS - Hold On To Your Heart
+          p.blog-post-meta
+            | February 5, 2018 by Ivy
+            .post-content
+              p
+                |Genre: Pop-rock
+              p
+                |Recommended Songs:
+              ul.songs
+                li Feels Like Falling In Love
+                li First Kiss Feeling
+                li Drive Me Wild
+              p.post-text
+                |I have a soft spot for upbeat, arena-jamming pop-rock about important teenage feelings, and this album is unabashedly so. Opener "The Dark" isn't bad, but a bit odd as an album opener because of how soft and downtrodden it is. The album shines most when the band embraces the fun, fist-pumpy nature of the genre and churns out bangers. As is common with these types of albums, though, the individual 
+                |tracks do tend to blend into one another, and the singles are standouts mainly because someone—the band, the studio, a marketing exec, whatever—thought so and selected it as the one to receive promotion. There's certain parts where the lead singer's voice reminds me of Patrick Stump's—am I crazy?
+              button.more(type='button') More
+        hr
+        .blog-post
+          h2.blog-post-title Porches - The House
+          p.blog-post-meta
+            | February 20, 2018 by Ivy
+            .post-content
+              p
+                |Genre: Indie pop
+              p
+                |Recommended Songs:
+              ul.songs
+                li Find Me
+                li Country
+              p.post-text
+                | We're featuring this mainly because I want to balance out the amount of rock that has been on this week, but I'll readily admit it's not my favorite album this week, and I'm not sure if the reason I like it is more that I enjoy it as much as it is that I just find it interesting to listen to. 
+                | The production that has gone into it is pretty interesting, although I do feel like it's the sort of quasi-experimental indie dream noise that has been done before….granted, I don't | |   listen to a lot of quasi-experimental indie dream noise bands, so maybe this one really stands out.
+              button.more(type='button') More
+        //- // /.blog-post
+        //- nav.blog-pagination
+        //-   a.btn.btn-outline-primary(href='#') Older
+        //-   a.btn.btn-outline-secondary.disabled(href='#') Newer
+      .col-sm-3.offset-sm-1.blog-sidebar
+        .sidebar-module
+          .search(style="padding-bottom:20px")
+            h4 Search Reviews:
+            input.search-box(type='text' placeholder='Not implemented yet')
+        .sidebar-module
+          h4 Tags (Not yet implemented)
+          ol.list-unstyled
+            li
+              a(href='#') Tag 1
+            li
+              a(href='#') Tag 2
+            li
+              a(href='#') Tag 3
+            li
+              a(href='#') Tag 4
+            li
+              a(href='#') Tag 5
