@@ -19,49 +19,35 @@ html(lang='en')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q', crossorigin='anonymous')
     //Bootstrap JS
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl', crossorigin='anonymous')
-    style(media='screen').
-      .jumbotron{
-      text-align:center;
-      }
-      .col-sm-4{
-      padding-bottom: 20px;
-      }
-      #logo{
-      max-width: 20%;
-      height: auto;
-      border-radius: 50%;
-      }
-      @media (min-width: 576px) {
-      .jumbotron {
-      padding-top: 10px;
-      padding-bottom: 20px; //for resizing jumbotron
-      }
-      }
     block additionalHead
+      style(type='text/css').
+        .nav-link: hover {color: red;}
   body
-    // Navbar
-    nav.navbar.navbar-expand-sm.bg-dark.navbar-dark
-      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#collapsibleNavbar')
-        span.navbar-toggler-icon
-      // Navbar links
-      #collapsibleNavbar.collapse.navbar-collapse
-        ul.navbar-nav
-          li.nav-item
-            a.nav-link(href='/') Home
-          li.nav-item
-            a.nav-link(href='/howtolisten') How to Listen
-          li.nav-item
-            a.nav-link(href='/blog') Blog
-          li.nav-item
-            a.nav-link(href='/search') Search Playlists
-    // Jumbotron
-    .jumbotron
-      a.nav-link(href='/')
-        img#logo(src='images/logo.png', alt='Logo')
-      h1 The IV Drip
-      p
-        | A weekly dose of the latest and/or greatest in alt rock, featuring highlights from the best of the week's albums!
-      p Thursdays 12-2pm | 89.3 FM | 
-        a(href='/howtolisten') Live Stream
+      // Jumbotron
+      .jumbotron
+        // Navbar
+        nav.navbar.navbar-expand-md.navbar-dark
+          button.navbar-toggler(type='button', data-toggle='collapse', data-target='#collapsibleNavbar')
+            span.navbar-toggler-icon
+          // Navbar links
+          #collapsibleNavbar.collapse.navbar-collapse
+            ul.navbar-nav.routes
+              li.nav-item
+                a.nav-link(href='/') Home
+              li.nav-item
+                a.nav-link(href='/howtolisten') How to Listen
+              li.nav-item
+                a.nav-link(href='/blog') Blog
+              li.nav-item
+                a.nav-link(href='/search') Search Playlists
+            ul.navbar-nav.ml-auto
+              iframe#follow(src='https://open.spotify.com/follow/1/?uri=spotify:user:04g30cjey9d0jerbgv7hzvnv4&size=basic&theme=dark', width='300', height='25', scrolling='no', frameborder='0', style='border:none; overflow:hidden;', allowtransparency='true')
+        a.nav-link(href='/')
+          img#logo(src='images/logo.png', alt='Logo')
+        h1 The IV Drip
+        p
+          | A weekly dose of the latest and/or greatest in alt rock, featuring highlights from the best of the week's albums!
+        p Thursdays 12-2pm | 89.3 FM | 
+          a#live-stream(href='/howtolisten') Live Stream
   
 block content

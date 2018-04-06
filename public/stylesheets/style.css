@@ -1,3 +1,76 @@
+/*
+Colors:
+teal : #2EA788
+black: #222222
+gray on jumbo: #bdc3cc
+
+other colors that go well
+#594064
+#a7442e
+#a7812e
+#645f40
+#a72e7b
+#a7a7a7
+
+*/
+
+
 body {
   font-family: "Rubik", "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.routes{
+  text-align: left;
+  margin-left: -20px;
+}
+
+.jumbotron{
+  text-align:center;
+  background:url('../images/banner.png');
+  color: #bdc3cc;
+  border-radius: 0px;
+  /* margin-top: -60px; */
+}
+.col-md-4{
+  padding-bottom: 20px;
+}
+
+nav {
+    /* background-color: #222222; */
+    /* border-color: #222222; */
+    background:transparent;
+}
+
+.navbar-dark .routes .nav-link {
+  color: #bdc3cc;
+}
+
+.navbar-dark .routes .nav-link:hover{
+  color: #2EA788;
+}
+
+#live-stream{
+  color: #2EA788;
+}
+
+#logo{
+  max-width: 20%;
+  height: auto;
+  border-radius: 50%;
+}
+#follow{
+  text-align: left;
+  margin-right: -160px;
+}
+@media (min-width: 576px) {
+  .jumbotron {
+    padding-top: 10px;
+    padding-bottom: 20px; //for resizing jumbotron
+    text-align:center;
+  }
+
+  /* .navbar-nav li a {
+    line-height: 15px;
+} */
 }

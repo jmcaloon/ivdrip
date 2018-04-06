@@ -8,20 +8,20 @@ block content
       hr
       .row
         for playlist in recentlyAired
-          .col-sm-4
+          .col-md-4
             h5 #{playlist.title}
             iframe(src= playlist.url, width='300', height='350', frameborder='0', allowtransparency='true')
 
       h4 DJ's Picks
       hr
       .row
-        .col-sm-4
+        .col-md-4
           h5 Killer Ladies [IVD 2/22]
           iframe(src="https://open.spotify.com/embed/user/04g30cjey9d0jerbgv7hzvnv4/playlist/5bRe5rypKumn4aaqCJiqnP", width="300", height="350", frameborder="0", allowtransparency="true")
-        .col-sm-4
+        .col-md-4
           h5 Good Vibes Only [IVD 3/1]
           iframe(src="https://open.spotify.com/embed/user/04g30cjey9d0jerbgv7hzvnv4/playlist/5xyOoT3xRIK0EPVqZ4Beuq", width='300', height='350', frameborder='0', allowtransparency='true')
-        .col-sm-4
+        .col-md-4
           h5 punk's not dead [IVD 2/15]
           iframe(src="https://open.spotify.com/embed/user/04g30cjey9d0jerbgv7hzvnv4/playlist/0P69gKsRXRoWAqWH5rdXsb" width="300", height="350", frameborder="0", allowtransparency="true")
 
@@ -29,6 +29,6 @@ block content
       hr
       .row
         for playlist in bestOfWeek
-          .col-sm-4
+          .col-md-4
             h5 #{playlist.title}
             iframe(src= playlist.url, width='300', height='350', frameborder='0', allowtransparency='true')

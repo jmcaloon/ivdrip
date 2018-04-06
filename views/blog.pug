@@ -16,23 +16,29 @@ block additionalHead
     font-size: 20px;
     }  
     
+    .indie{
+      background-color: #2EA788;
+    }
+    
 block content
 
   .blog-header
     .container
-      h1.blog-title Album Review Blog
+      h2.blog-title Album Review Blog
       //p.lead.blog-description Album reviews and more
   .container
     .row
-      .col-sm-8.blog-main
+      .col-md-8.blog-main
         hr
         .blog-post
+          button.tag.indie Indie
+          button.tag Folk
           h2.blog-post-title Glen Hansard - Between Two Shores 
           p.blog-post-meta
             | January 18, 2018 by Ivy
           .post-content
             p
-              |Genre: Indie, folk
+              |Genre: Indie, Folk
             p
               |Recommended Songs:
             ul.songs
@@ -81,7 +87,7 @@ block content
         //- nav.blog-pagination
         //-   a.btn.btn-outline-primary(href='#') Older
         //-   a.btn.btn-outline-secondary.disabled(href='#') Newer
-      .col-sm-3.offset-sm-1.blog-sidebar
+      .col-md-3.offset-sm-1.blog-sidebar
         .sidebar-module
           .search(style="padding-bottom:20px")
             h4 Search Reviews:
