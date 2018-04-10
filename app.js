@@ -17,8 +17,8 @@ app.listen(3000);
 console.log("Running at Port 3000");
 
 function getPlaylists(callback){
-  const clientId = "10c10dbab6d54cf9b26829c1262c72c2";
-  const clientSecret = "c3a715a597bb4bb8a733f75d0b3a77c8";
+  const clientId = "";
+  const clientSecret = "";
   //requesting authorization from spotify api
   let authOptions = {
     url: 'https://accounts.spotify.com/api/token',
