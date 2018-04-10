@@ -8,8 +8,8 @@ authored by Keith Wood under the MIT license http://keith-wood.name/countdown.ht
 function getNextThurs(){
   let today = new Date();
   let nextThurs = new Date();
-  nextThurs.setDate(today.getDate() + (4+ 7 - today.getDay() % 7));
-  nextThurs.setHours(14);
+  nextThurs.setDate(today.getDate() + (4 - today.getDay() % 7));
+  nextThurs.setHours(12);
   nextThurs.setMinutes(0);
 
   return nextThurs
@@ -40,10 +40,10 @@ function test(){
 
    nextThurs = getNextThurs()
 
-   $("#next-show").html(nextThurs.toDateString() + " at 2 PM");
+   $("#next-show").html(nextThurs.toDateString() + " at 12 PM");
 
 
-   $("#countdown").countdown({until: getNextThurs(), timezone: -4,
+   $("#countdown").countdown({until: getNextThurs(), timezone: -4, format: 'yowdHMS',
     onExpiry: function(){
       $(this).countdown('option', {until:getNextThurs(), timezone: -4});
       //$(this).countdown('option', {until: getOneMinute(), timezone: -4})

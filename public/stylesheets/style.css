@@ -8,7 +8,6 @@ other colors that go well
 #594064
 #a7442e
 #a7812e
-#645f40
 #a72e7b
 #a7a7a7
 
@@ -18,11 +17,13 @@ other colors that go well
 body {
   font-family: "Rubik", "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #f9f9f9;
+  /* background:url('../images/banner.png'); */
+  /* color: white; */
 }
 
 .routes{
   text-align: left;
-  margin-left: -20px;
+  margin-left: -8px;
 }
 
 .jumbotron{
@@ -30,6 +31,7 @@ body {
   background:url('../images/banner.png');
   color: #bdc3cc;
   border-radius: 0px;
+  /* background: transparent; */
   /* margin-top: -60px; */
 }
 .col-md-4{
@@ -62,6 +64,7 @@ nav {
 #follow{
   text-align: left;
   margin-right: -160px;
+  margin-left: -8px;
 }
 @media (min-width: 576px) {
   .jumbotron {

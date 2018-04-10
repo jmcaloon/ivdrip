@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $('button').on('click', function(){
+  $('.toggler').on('click', function(){
     //Show more of a post when "more" button is clicked
     if ($(this).hasClass('more')) {
       let text = $(this).prev()
@@ -19,5 +19,23 @@ $(document).ready(function(){
       $(this).removeClass('less').addClass('more')
     }
 
-  })
+  });
+
+  //When a tag is clicked, hide posts that don't have that tag
+  $(".tag").on("click", function(){
+    let tag = $(this).attr('class').split(' ')[1];
+
+    $(".blog-post").each(function(){
+      $(this).show();
+      if (!($(this).hasClass(tag))){
+        $(this).hide();
+      }
+    });
+  });
+
+  $(".show-all").on("click", function(){
+    $(".blog-post").each(function(){
+      $(this).show();
+    });
+  });
 });

@@ -6,36 +6,36 @@
 .countdown-rtl {
 	direction: rtl;
 }
-.countdown-holding span {
+/* .countdown-holding span {
 	color: #888;
-}
-.countdown-row {
+} */
+/* .countdown-row {
 	clear: both;
 	width: 100%;
 	padding: 0px 2px;
 	text-align: center;
-}
-.countdown-show1 .countdown-section {
+} */
+/* .countdown-show1 .countdown-section {
 	width: 98%;
-}
-.countdown-show2 .countdown-section {
+} */
+/* .countdown-show2 .countdown-section {
 	width: 48%;
-}
-.countdown-show3 .countdown-section {
+} */
+/* .countdown-show3 .countdown-section {
 	width: 32.5%;
-}
+} */
 .countdown-show4 .countdown-section {
-	width: 24.5%;
+	width: 10%;
 }
-.countdown-show5 .countdown-section {
+/* .countdown-show5 .countdown-section {
 	width: 19.5%;
-}
-.countdown-show6 .countdown-section {
+} */
+/* .countdown-show6 .countdown-section {
 	width: 16.25%;
-}
-.countdown-show7 .countdown-section {
+} */
+/* .countdown-show7 .countdown-section {
 	width: 14%;
-}
+} */
 .countdown-section {
 	display: block;
 	float: left;
@@ -50,5 +50,4 @@
 }
 .countdown-descr {
 	display: block;
-	width: 100%;
 }
