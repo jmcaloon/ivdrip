@@ -32,10 +32,24 @@ $(document).ready(function(){
       }
     });
   });
-
+  //Show all posts regardless of tag
   $(".show-all").on("click", function(){
     $(".blog-post").each(function(){
       $(this).show();
     });
+  });
+
+  $('.search-box').on('keyup', function(){
+    let searchTerm = $(this).val().toLowerCase();
+    $(".blog-post").each(function(){
+      $(this).attr('data-text', $(this).text().toLowerCase());
+      if ($(this).filter('[data-text *= ' + searchTerm + ']').length > 0 || searchTerm.length < 1) {
+        $(this).show();
+      } else {
+        $(this).hide();
+      }
+
+    });
+
   });
 });

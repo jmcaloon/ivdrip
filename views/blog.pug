@@ -29,14 +29,18 @@ block additionalHead
     }
     
     button.pop-rock{
-      background-color: #a7812e;
+      background-color: #dd6ab3;
     }
     
     button.indie-pop{
-      background-color: #a72e7b;
+      background-color: #a7812e;
     }
     
-    /*  Next one should be #8d659c or #ac7fb8*/
+    button.punk{
+      background: #8d659c;
+    }
+    
+    /*  Next one should be #ac7fb8*/
     
 block content
 
@@ -104,6 +108,27 @@ block content
                 | We're featuring this mainly because I want to balance out the amount of rock that has been on this week, but I'll readily admit it's not my favorite album this week, and I'm not sure if the reason I like it is more that I enjoy it as much as it is that I just find it interesting to listen to. 
                 | The production that has gone into it is pretty interesting, although I do feel like it's the sort of quasi-experimental indie dream noise that has been done before….granted, I don't | |   listen to a lot of quasi-experimental indie dream noise bands, so maybe this one really stands out.
               button.toggler.more(type='button') More
+        .blog-post.punk.pop-rock
+          hr
+          button.tag.punk Punk
+          button.tag.pop-rock Pop-rock
+          h2.blog-post-title DZ Deathrays - Bloody Lovely
+          p.blog-post-meta
+            | March 1, 2018 by Ivy
+            .post-content
+              p
+                |Genre: Punk, Pop-rock
+              p
+                |Recommended Songs:
+              ul.songs
+                li Shred For Summer
+                li Total Meltdown
+                li Witchcraft Pt/ II
+              p.post-text
+                | I'm featuring this album mostly because it's excellent but at least partially because I know our dutiful co-host Taylor will absolutely hate it. What can I say? I’ll always have a soft spot for thrashy punk. It might be easy to write off DZ Deathrays as yet another shouty noise-rock dump, but the underlying songwriting is
+                | fantastic, with loads of catchy hooks and anthemic, sing-along choruses. Don't get fooled by the ugly veneer of grit and grime scuffing up everything, these songs are tight as any good pop song and will stick in your head just as easily.
+              button.toggler.more(type='button') More
+        
         //- // /.blog-post
         //- nav.blog-pagination
         //-   a.btn.btn-outline-primary(href='#') Older
@@ -112,7 +137,7 @@ block content
         .sidebar-module
           .search(style="padding-bottom:20px")
             h4 Search Reviews:
-            input.search-box(type='text' placeholder='Not implemented yet')
+            input.search-box(type='text')
         .sidebar-module
           h4 Filter by tag:
           ol.list-unstyled
@@ -126,3 +151,5 @@ block content
               button.tag.pop-rock Pop-rock
             li
               button.tag.indie-pop Indie-pop
+            li
+              button.tag.punk Punk

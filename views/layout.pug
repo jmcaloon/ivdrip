@@ -17,11 +17,11 @@ html(lang='en')
     script(type='text/javascript', src='scripts/countdown/jquery.countdown.js')
     //Ajax
     script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q', crossorigin='anonymous')
+    //Icon library
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
     //Bootstrap JS
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl', crossorigin='anonymous')
-    block additionalHead
-      style(type='text/css').
-        .nav-link: hover {color: red;}
+  block additionalHead
   body
       // Jumbotron
       .jumbotron
@@ -50,3 +50,24 @@ html(lang='en')
           a#live-stream(href='/howtolisten') Live Stream
   
 block content
+
+// Footer
+footer.page-footer.font-small.pt-0.text-center
+  // Footer Links
+  .container
+    // First row
+    .row
+      // First column
+      .col-md-12
+        .mb-5.flex-center
+          // Twitter
+          a(href='https://twitter.com/theivdrip?lang=en').tw-ic
+            i.fa.fa-twitter.fa-3x
+          // Spotify
+          a(href='https://open.spotify.com/user/04g30cjey9d0jerbgv7hzvnv4?si=khT2NX2wT2aMetEoA30znw').sp-ic
+            i.fa.fa-spotify.fa-3x
+      .footer-copyright 
+        | Brought to you by:
+        a#wtbu(href='http://sites.bu.edu/wtbu/')  WTBU Radio 
+  // /Copyright
+// /Footer

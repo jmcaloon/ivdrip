@@ -1,10 +1,16 @@
 extends layout
 
+block additionalHead
+  style(type='text/css').
+    .row {
+      margin-bottom: 50px;
+    }
+
 block content
   title The IV Drip
   body
-    .container-fluid
-      h4 Recently Aired
+    .container-fluid.text-center
+      h3 Recently Aired
       hr
       .row
         for playlist in recentlyAired
@@ -12,7 +18,7 @@ block content
             h5 #{playlist.title}
             iframe(src= playlist.url, width='300', height='350', frameborder='0', allowtransparency='true')
 
-      h4 DJ's Picks
+      h3 DJ's Picks
       hr
       .row
         .col-md-4
@@ -25,7 +31,7 @@ block content
           h5 punk's not dead [IVD 2/15]
           iframe(src="https://open.spotify.com/embed/user/04g30cjey9d0jerbgv7hzvnv4/playlist/0P69gKsRXRoWAqWH5rdXsb" width="300", height="350", frameborder="0", allowtransparency="true")
 
-      h4 Best of the Week's
+      h3 Best of the Week's
       hr
       .row
         for playlist in bestOfWeek

@@ -16,5 +16,11 @@ $(document).ready(function(){
     });
 
   });
+  $('#clear').on('click', function(){
+    $('#search-term').val('');
+    $('.playlist').each(function(){
+      $(this).parent().show();
+    });
+  });
 
 });
