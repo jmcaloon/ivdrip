@@ -15,10 +15,8 @@ other colors that go well
 
 
 body {
-  font-family: "Rubik", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #f9f9f9;
-  /* background:url('../images/banner.png'); */
-  /* color: white; */
 }
 
 .routes{
@@ -51,6 +49,11 @@ nav {
 
 .navbar-dark .routes .nav-link:hover{
   color: #2EA788;
+}
+
+#clear{
+  height:28px;
+  background-color: #2EA788;
 }
 
 #live-stream{

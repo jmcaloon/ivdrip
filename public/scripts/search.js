@@ -17,7 +17,7 @@ $(document).ready(function(){
 
   });
   $('#clear').on('click', function(){
-    $('#search-term').val('');
+    $('.search-box').val('');
     $('.playlist').each(function(){
       $(this).parent().show();
     });

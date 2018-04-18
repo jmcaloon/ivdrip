@@ -49,7 +49,7 @@ function test(){
 
    nextThurs = getNextThurs()
 
-   $("#next-show").html(nextThurs.toDateString() + " at 12 PM");
+   $("#next-show").html(" " +nextThurs.toDateString() + " at 12 PM");
 
 
    $("#countdown").countdown({until: getNextThurs(), timezone: -4, format: 'yowdHMS',

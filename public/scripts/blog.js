@@ -52,4 +52,11 @@ $(document).ready(function(){
     });
 
   });
+
+  $('#clear').on('click', function(){
+    $('.search-box').val('');
+    $('.blog-post').each(function(){
+      $(this).show();
+    });
+  });
 });

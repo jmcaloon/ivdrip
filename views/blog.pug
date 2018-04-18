@@ -21,7 +21,7 @@ block additionalHead
     }  
     
     button.indie{
-      background-color: #2EA788;
+      background-color: #41d3f4;
     }
     
     button.folk{
@@ -70,15 +70,51 @@ block content
               | The name Glen Hansard felt vaguely familiar to me, but I couldn't put my finger on why until I checked his Spotify discography and realized that he both starred in and wrote music for the movie Once, which I was obsessed with in my freshman year of high school. I had the CD from the library and wore it out, but particularly the song "Falling Slowly". Anyway, this album is pure, good folk/indie rock, the likes of which flourished in the 2010 era but have been on the decline for a | bit now. Glen Hansard is a wonderful singer and songwriter, and although I myself don't consider myself big into this style of music anymore, it's still a treat to hear the genre in the hands of someone who knows what they're doing. 
             button.toggler.more(type='button') More
             
-        .blog-post.pop-rock
+        .blog-post.punk.indie-pop
+          hr
+          button.tag.punk Punk
+          button.tag.indie-pop Indie-pop
+          h2.blog-post-title War on Women - Capture the Flag
+          p.blog-post-meta
+            | April 17, 2018 by Ivy
+            .post-content
+              p
+                |Genre: Punk, Indie-rock
+              p
+                |Recommended Songs:
+              ul.songs
+                li Silence Is the Gift
+                li Predator in Chief
+                li Lone Wolves
+              p.post-text
+                | If, at best, subversive ideas can sneak into popular culture like a Trojan horse—with radical thought encoded 
+                | rather than didactically stated—then War On Women pay this no mind. Their eviscerating alt-rock never backs down from the supposed trappings of 
+                | protest music. War On Women state the facts. They are self-righteous. They point fingers. Activism is prominently at the heart of 
+                | their screeds against the systematic plagues of patriarchy, racism, and capitalism. The enemy is everywhere. War On Women prioritize taking it down.
+                | Last summer, this uncompromising approach found War On Women thoroughly out-of-step at the roving mall-punk summit Warped Tour. In a groundbreaking move, they 
+                | brought a booth to promote “Safer Spaces” and teach festival-goers about bystander intervention. “There’s actually very few people who do what War On Women do,” Kathleen 
+                | Hanna said in an interview about the Capture 
+                | the Flag song she lent vocals to, “YDTMHTL.” “We do such similar work in the world that I felt an immediate shorthand with them.”
+                | Like Bikini Kill in the 1990s, War On Women are on a fearless mission to change their subculture. (Potter, like Hanna, is herself 
+                | an activist: She founded the Baltimore chapter of Hollaback!, the anti-street harassment nonprofit.) But while War On Women self-identify 
+                | as a hardcore band, they largely slick their edges here, thanks in no small part to co-producer J. Robbins of post-hardcore progenitors Jawbox. 
+                | The effect is accessible but merciless, more AFI than G.L.O.S.S., or a less aesthetically-minded White Lung. Only a handful of War On Women’s new songs 
+                | adopt the traditional markers of hardcore—aggression, d-beat rhythms, air-tight rage—though these are their best ones. Their fury makes topics like reproductive justice, racist 
+                | monuments, and female genital mutilation sound as gnarled and unfriendly as they ought to: “You tie us up in red tape/It’s red because we’re soaking in blood,” Potter screams on “The Violence of Bureaucracy.” 
+                | Potter once said that her dream lineup for Warped Tour would include Babes 
+                | in Toyland, Brody Dalle, Hole, Against Me!, and Katy Perry—all a testament to War On Women’s brick-heavy and yet manicured feminist rock schema, dynamic and massive. 
+              button.toggler.more(type='button') More
+            
+        .blog-post.pop-rock.indie
           hr
           button.tag.pop-rock Pop-rock
+          button.tag.indie Indie
           h2.blog-post-title The XCERTS - Hold On To Your Heart
           p.blog-post-meta
             | February 5, 2018 by Ivy
             .post-content
               p
-                |Genre: Pop-rock
+                |Genre: Pop-rock, Indie
               p
                 |Recommended Songs:
               ul.songs
@@ -108,6 +144,7 @@ block content
                 | We're featuring this mainly because I want to balance out the amount of rock that has been on this week, but I'll readily admit it's not my favorite album this week, and I'm not sure if the reason I like it is more that I enjoy it as much as it is that I just find it interesting to listen to. 
                 | The production that has gone into it is pretty interesting, although I do feel like it's the sort of quasi-experimental indie dream noise that has been done before….granted, I don't | |   listen to a lot of quasi-experimental indie dream noise bands, so maybe this one really stands out.
               button.toggler.more(type='button') More
+              
         .blog-post.punk.pop-rock
           hr
           button.tag.punk Punk
@@ -128,6 +165,7 @@ block content
                 | I'm featuring this album mostly because it's excellent but at least partially because I know our dutiful co-host Taylor will absolutely hate it. What can I say? I’ll always have a soft spot for thrashy punk. It might be easy to write off DZ Deathrays as yet another shouty noise-rock dump, but the underlying songwriting is
                 | fantastic, with loads of catchy hooks and anthemic, sing-along choruses. Don't get fooled by the ugly veneer of grit and grime scuffing up everything, these songs are tight as any good pop song and will stick in your head just as easily.
               button.toggler.more(type='button') More
+            
         
         //- // /.blog-post
         //- nav.blog-pagination
@@ -138,6 +176,7 @@ block content
           .search(style="padding-bottom:20px")
             h4 Search Reviews:
             input.search-box(type='text')
+            button#clear Clear
         .sidebar-module
           h4 Filter by tag:
           ol.list-unstyled
