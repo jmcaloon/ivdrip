@@ -14,30 +14,21 @@ function getNextThurs(){
     nextThurs.setDate(today.getDate() + (4 + 7 - today.getDay() % 7));
 
   }
-  else{
+  else if(today.getDay() <= 4){
     nextThurs.setDate(today.getDate() + (4 - today.getDay() % 7));
+  }
+  else{
+    nextThurs.setDate(today.getDate() + (4 + 7 - today.getDay() % 7));
   }
 
   nextThurs.setHours(12);
   nextThurs.setMinutes(0);
-
+  nextThurs.setSeconds(0);
   return nextThurs
 
 }
 
-function getTwoHours(){
-  let today = new Date();
-  let twoHours = new Date();
-  twoHours.setHours(today.getHours()+2);
-  return twoHours
-}
-
-function getOneMinute(){
-  let today = new Date();
-  return new Date(today.getTime() + 30000)
-
-}
-
+//Functions to test that countdown restarts
 function test(){
   let today = new Date();
   return new Date(today.getTime() + 15000)

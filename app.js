@@ -40,7 +40,7 @@ function getPlaylists(callback){
       // Access playlists from The IV Drip's account
       let token = body.access_token;
       let options = {
-        url: 'https://api.spotify.com/v1/users/04g30cjey9d0jerbgv7hzvnv4/playlists',
+        url: 'https://api.spotify.com/v1/users/04g30cjey9d0jerbgv7hzvnv4/playlists?limit=50',
         headers: {
           'Authorization': 'Bearer ' + token
         },

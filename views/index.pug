@@ -1,39 +1,60 @@
 extends layout
 
 block additionalHead
-  script(type='text/javascript', src='/scripts/nextShow.js')
   style(type='text/css').
     .row {
       margin-bottom: 50px;
     }
     #player-box{
-    text-align: center;
+    /* text-align: center;
     vertical-align: middle;
     padding: 10px;
     margin-left: 40px;
-    margin-right:40px;
+    margin-right:40px; */
     }
     
     #live-in{
-      margin-left: auto;
+      /* margin-left: auto;
       margin-right: auto;
-      margin-bottom: -70px;
+      margin-bottom: -70px; */
     }
     
     #countdown{
-      margin-left: auto;
+      /* margin-left: auto;
       margin-right: auto;
-      margin-bottom: 20px;
-      margin-top: -20px;
+      margin-top: -20px; */
     }
+    
+    #player-box{
+      /* margin-left: auto;
+      margin-right: auto;
+      margin-top: -40px; */
+    }
+
+    #wrapper {
+       width: 1005px;
+       margin: 0 auto;
+     }
+    #leftcolumn, #rightcolumn {
+        border: 1px solid white;
+        float: left;
+        min-height: 450px;
+        color: white;
+    }
+    #leftcolumn {
+         width: 250px;
+         background-color: #111;
+    }
+
+    #rightcolumn {
+         width: 750px;
+         background-color: #777;
+    }
+
     
 block content
   title The IV Drip
   body
-    .row
-      h4#live-in We're live in...
-    .row
-      #countdown
     .container-fluid.text-center
       h3 Recently Aired
       hr

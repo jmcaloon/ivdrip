@@ -17,6 +17,7 @@ other colors that go well
 body {
   font-family: "Source Sans Pro", "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #f9f9f9;
+  color: #555;
 }
 
 .routes{
@@ -30,16 +31,13 @@ body {
   background:url('../images/banner.png');
   color: #bdc3cc;
   border-radius: 0px;
-  /* background: transparent; */
-  /* margin-top: -60px; */
 }
 .col-md-4{
   padding-bottom: 20px;
 }
 
 nav {
-    /* background-color: #222222; */
-    /* border-color: #222222; */
+    margin-top: -10px;
     background:transparent;
 }
 
@@ -61,8 +59,10 @@ nav {
 }
 
 #logo{
-  max-width: 20%;
-  height: auto;
+  padding-top: -20px;
+  max-width: 17%;
+  max-height: 17%;
+  /* height: auto; */
   border-radius: 50%;
 }
 #follow{
@@ -72,9 +72,11 @@ nav {
 }
 @media (min-width: 576px) {
   .jumbotron {
-    padding-top: 10px;
-    padding-bottom: 20px; //for resizing jumbotron
-    text-align:center;
+    background:url('../images/banner.png');
+    color: #bdc3cc;
+    border-radius: 0px;
+    padding-top: 5px;
+    padding-bottom: .5px; //for resizing jumbotron
   }
 }
 

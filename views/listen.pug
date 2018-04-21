@@ -3,31 +3,129 @@ extends layout
 block additionalHead
   script(type='text/javascript', src='/scripts/nextShow.js')
   style(type='text/css').
-    #player-box{
-    text-align: center;
-    vertical-align: middle;
-    padding: 10px;
-    margin-left: 40px;
-    margin-right:40px;
+    .row {
+      margin-bottom: 50px;
+    }
+    
+    #title{
+      text-align: center;
+    }
+    
+    #live-in{
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 0px;
     }
     
     #countdown{
-      margin-bottom: 50px
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: -40px;
+      margin-bottom: -80px;
     }
+    
+    #player-box{
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      vertical-align: middle;
+    }
+    
+    #next-show-box{
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      vertical-align: middle;
+    }
+    
+    #countdown-container{
+      position: absolute;
+      color: black;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 25px;
+    }
+    
+    .section-title{
+      width:100%; 
+      text-align:center; 
+      border-bottom: 1px solid #000; 
+      line-height:0.3em; 
+      margin-right: auto;
+      margin-left: auto;
+    }
+    
+    .section-title span{
+      padding:0 10px;
+    }
+    
+    .section-title { 
+      width:100%; 
+      text-align:center; 
+      border-bottom: 1px solid #000; 
+      line-height:0.1em; 
+      margin:10px 0 20px; 
+    } 
+      
+    .section-title span { 
+      background:#f9f9f9; 
+      padding:0 10px; 
+    }
+    
+    .col-md-8{
+      margin: auto;
+    }
+    
+    #phone-img {
+      height: 70%;
+      width: 70%;
+      display: block;
+      margin: auto;
+      opacity: .5;
+      max-width: 50%;
+    }
+    
+    .img-container {
+      position: relative;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
     
 
 block content
-  h3 Listen here Thursdays from 12-2pm:
-
-
+  title How to Listen
   body
-    #player-box
-      h4#player-name WTBU Live Stream
-      audio(controls='')
-        source#player-src(src='http://wtbu.bu.edu:1800/', type='audio/mpeg')
-    br
-    h4 Next show: 
-      span#next-show 
-    br
-    h4 We're live in...
-    #countdown
+    h2#title How to Listen
+    .img-container
+      img#phone-img(src='../images/listen.jpg', alt='Mountain View')
+      #countdown-container
+        .row
+          h4#live-in We're live in...
+        .row
+          #countdown
+    .row
+      .col-md-8
+        h3.section-title
+          span Stream
+    .row
+      #player-box
+        h5#player-name Listen here <b> Thursdays at 12pm </b>!
+        p WTBU Live Stream:
+        audio(controls='')
+          source#player-src(src='http://wtbu.bu.edu:1800/', type='audio/mpeg')
+    //- .row
+    //-   #next-show-box
+    //-     h4 Next show: 
+    //-       span#next-show 
+    .row
+      .col-md-8
+        h3.section-title
+          span App  
+    .row
+      .col-md-8
+        h3.section-title
+          span Radio
+       
+    
