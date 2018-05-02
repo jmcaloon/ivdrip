@@ -27,6 +27,8 @@ block additionalHead
     #player-box{
       margin-left: auto;
       margin-right: auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
       text-align: center;
       vertical-align: middle;
     }
@@ -66,6 +68,7 @@ block additionalHead
       border-bottom: 1px solid #000; 
       line-height:0.1em; 
       margin:10px 0 20px; 
+      margin-bottom: 40px;
     } 
       
     .section-title span { 
@@ -75,6 +78,7 @@ block additionalHead
     
     .col-md-8{
       margin: auto;
+      text-align: center;
     }
     
     #phone-img {
@@ -86,10 +90,16 @@ block additionalHead
       max-width: 50%;
     }
     
+    #wtbu-img{
+      border-radius: 25px;
+      max-width: 175px;
+      min-width: 175px;
+    }
+    
     .img-container {
       position: relative;
       text-align: center;
-      margin-bottom: 10px;
+      margin-bottom: 50px;
     }
 
     
@@ -99,7 +109,7 @@ block content
   body
     h2#title How to Listen
     .img-container
-      img#phone-img(src='../images/listen.jpg', alt='Mountain View')
+      img#phone-img(src='../images/listen.jpg', alt='Listen')
       #countdown-container
         .row
           h4#live-in We're live in...
@@ -108,13 +118,12 @@ block content
     .row
       .col-md-8
         h3.section-title
-          span Stream
-    .row
-      #player-box
-        h5#player-name Listen here <b> Thursdays at 12pm </b>!
-        p WTBU Live Stream:
-        audio(controls='')
-          source#player-src(src='http://wtbu.bu.edu:1800/', type='audio/mpeg')
+          span Stream Here
+        #player-box
+          h5#player-name Listen here <b> Thursdays at 12pm</b>!
+          p WTBU Live Stream:
+          audio(controls='')
+            source#player-src(src='http://wtbu.bu.edu:1800/', type='audio/mpeg')
     //- .row
     //-   #next-show-box
     //-     h4 Next show: 
@@ -122,10 +131,15 @@ block content
     .row
       .col-md-8
         h3.section-title
-          span App  
+          span iOS App
+        p iOS users can stream The IV Drip on the go with the free 
+          a#live-stream(href='https://itunes.apple.com/us/app/wtbu/id1161247222?mt=8') WTBU app
+        img#wtbu-img(src='../images/wtbu.jpg', alt='WTBU App')
     .row
       .col-md-8
         h3.section-title
           span Radio
+        p The IV Drip broadcasts on the following stations:
+        p 89.3 FM | 640 AM | BU Channel 6
        
     

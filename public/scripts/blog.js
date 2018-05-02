@@ -39,6 +39,8 @@ $(document).ready(function(){
     });
   });
 
+
+  //Searches title and text of blog posts for keyword
   $('.search-box').on('keyup', function(){
     let searchTerm = $(this).val().toLowerCase();
     $(".blog-post").each(function(){
@@ -53,6 +55,7 @@ $(document).ready(function(){
 
   });
 
+  //Clears search box when clicked and shows all posts
   $('#clear').on('click', function(){
     $('.search-box').val('');
     $('.blog-post').each(function(){

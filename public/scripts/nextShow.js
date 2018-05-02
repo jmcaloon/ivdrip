@@ -14,9 +14,11 @@ function getNextThurs(){
     nextThurs.setDate(today.getDate() + (4 + 7 - today.getDay() % 7));
 
   }
+  //if its Sunday-Thursday
   else if(today.getDay() <= 4){
     nextThurs.setDate(today.getDate() + (4 - today.getDay() % 7));
   }
+  //if its Friday or Saturday
   else{
     nextThurs.setDate(today.getDate() + (4 + 7 - today.getDay() % 7));
   }
@@ -44,7 +46,7 @@ function test(){
 
 
    $("#countdown").countdown({until: getNextThurs(), timezone: -4, format: 'yowdHMS',
-    onExpiry: function(){
+    onExpiry: function(){ //Restart countdown once its Thursday at 12pm
       $(this).countdown('option', {until:getNextThurs(), timezone: -4});
     }
   });
